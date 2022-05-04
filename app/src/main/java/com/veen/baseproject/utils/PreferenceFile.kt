@@ -6,16 +6,16 @@ import androidx.preference.PreferenceManager
 
 class PreferenceFile(private val context: Context) {
 
-    private val preference :SharedPreferences
+    private val preference: SharedPreferences
         get() = PreferenceManager.getDefaultSharedPreferences(context)
 
-    fun saveData(key: String, data: String){
+    fun saveData(key: String, data: String) {
         preference.edit().putString(
             key, data
         ).apply()
     }
 
-    fun getData(key: String): String?{
+    fun getData(key: String): String? {
         return preference.getString(key, null)
     }
 }

@@ -7,10 +7,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.veen.baseproject.databinding.AdapterMainBinding
 
-class MainAdapter(private val context: Context): RecyclerView.Adapter<MainAdapter.ViewHolder>() {
+class MainAdapter(private val context: Context) : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
     private lateinit var binding: AdapterMainBinding
 
-    inner class ViewHolder(itemView: View):RecyclerView.ViewHolder(itemView)
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainAdapter.ViewHolder {
         binding = AdapterMainBinding.inflate(LayoutInflater.from(context), parent, false)
